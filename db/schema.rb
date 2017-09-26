@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170926105627) do
+ActiveRecord::Schema.define(version: 20170926115925) do
 
   create_table "contacts", force: :cascade do |t|
     t.string   "number"
@@ -23,6 +23,30 @@ ActiveRecord::Schema.define(version: 20170926105627) do
   end
 
   add_index "contacts", ["mobile_number_id"], name: "index_contacts_on_mobile_number_id"
+
+  create_table "images", force: :cascade do |t|
+    t.text     "image"
+    t.string   "name"
+    t.date     "date"
+    t.time     "time"
+    t.integer  "mobile_number_id"
+    t.datetime "created_at",       null: false
+    t.datetime "updated_at",       null: false
+  end
+
+  add_index "images", ["mobile_number_id"], name: "index_images_on_mobile_number_id"
+
+  create_table "locations", force: :cascade do |t|
+    t.string   "latitude"
+    t.string   "longitude"
+    t.date     "date"
+    t.time     "time"
+    t.integer  "mobile_number_id"
+    t.datetime "created_at",       null: false
+    t.datetime "updated_at",       null: false
+  end
+
+  add_index "locations", ["mobile_number_id"], name: "index_locations_on_mobile_number_id"
 
   create_table "messages", force: :cascade do |t|
     t.string   "from_name"
@@ -43,6 +67,7 @@ ActiveRecord::Schema.define(version: 20170926105627) do
     t.string   "number"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.string   "gcm_id"
   end
 
 end
