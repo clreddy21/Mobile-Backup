@@ -3,6 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="fd9b88c6-594b-4a01-92a4-3c243168ea02" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/config/database.yml" afterPath="$PROJECT_DIR$/config/database.yml" />
     </list>
     <ignored path="Mobile-Backup.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -22,16 +23,6 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="20170926102253_create_mobile_numbers.rb" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/db/migrate/20170926102253_create_mobile_numbers.rb">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="45">
-              <caret line="3" column="14" selection-start-line="3" selection-start-column="14" selection-end-line="3" selection-end-column="14" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="mobile_number.rb" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/models/mobile_number.rb">
           <provider selected="true" editor-type-id="text-editor">
@@ -102,11 +93,21 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Gemfile" pinned="false" current-in-tab="true">
+      <file leaf-file-name="Gemfile" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Gemfile">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="16">
               <caret line="18" column="0" selection-start-line="18" selection-start-column="0" selection-end-line="18" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="database.yml" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/config/database.yml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="420">
+              <caret line="28" column="0" selection-start-line="28" selection-start-column="0" selection-end-line="28" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -139,6 +140,7 @@
         <option value="$PROJECT_DIR$/app/controllers/messages_controller.rb" />
         <option value="$PROJECT_DIR$/config/routes.rb" />
         <option value="$PROJECT_DIR$/Gemfile" />
+        <option value="$PROJECT_DIR$/config/database.yml" />
       </list>
     </option>
   </component>
@@ -430,7 +432,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1506420479743</updated>
-      <workItem from="1506420481393" duration="3091000" />
+      <workItem from="1506420481393" duration="3536000" />
     </task>
     <task id="LOCAL-00001" summary="commitr">
       <created>1506424385275</created>
@@ -446,11 +448,18 @@
       <option name="project" value="LOCAL" />
       <updated>1506424616931</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="commitr">
+      <created>1506424762758</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1506424762758</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="3091000" />
+    <option name="totallyTimeSpent" value="3536000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1280" height="800" extended-state="0" />
@@ -595,6 +604,14 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="16">
           <caret line="18" column="0" selection-start-line="18" selection-start-column="0" selection-end-line="18" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/config/database.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="420">
+          <caret line="28" column="0" selection-start-line="28" selection-start-column="0" selection-end-line="28" selection-end-column="0" />
           <folding />
         </state>
       </provider>
