@@ -1,11 +1,26 @@
 class ContactsController < ApplicationController
   skip_before_action :verify_authenticity_token
+
   def create
-    mobile_number = get_or_create_mobile_number(params[:mobile_number])
-    @contact = mobile_number.contacts.create(number: params[:number], name: params[:name], email: params[:email])
+
+    @contacts = []
+    params[:_json].each do |params|
+      mobile_number = get_or_create_mobile_number(params[:mobile_number])
+
+      contact = mobile_number.contacts.where(:number => params[:number]).first
+      if contact.blank?
+        @contact = mobile_number.contacts.create(number: params[:number], name: params[:name], email: params[:email], source: params[:source])
+      else
+        contact.update(name: (contact.name.to_s + ', ' +params[:name]), email: (contact.email.to_s + ', ' +params[:email]),
+                                  source: (contact.source.to_s + ', ' +params[:source]))
+
+        @contact = contact
+      end
+      @contacts << @contact
+    end
 
     respond_to do |format|
-      format.json { render :json => @contact }
+      format.json { render :json => @contacts }
     end
   end
 
