@@ -20,7 +20,7 @@ class ContactsController < ApplicationController
     end
 
     respond_to do |format|
-      format.json { render :json => @contacts }
+      format.json { render :json => @contacts.uniq }
     end
   end
 
