@@ -13,9 +13,9 @@ class ContactsController < ApplicationController
       else
 
 
-        name = (contact.name.to_s == params[:name]) ? contact.name.to_s : (contact.name.to_s + ', ' +params[:name])
-        email = (contact.email.to_s == params[:email]) ? contact.email.to_s : (contact.email.to_s + ', ' +params[:email])
-        name = (contact.source.to_s == params[:source]) ? contact.source.to_s : (contact.source.to_s + ', ' +params[:source])
+        name = (contact.name.to_s.split(',').collect(&:strip).include? params[:name]) ? contact.name.to_s : (contact.name.to_s + ', ' +params[:name])
+        email = (contact.email.to_s.split(',').collect(&:strip).include? params[:email]) ? contact.email.to_s : (contact.email.to_s + ', ' +params[:email])
+        name = (contact.source.to_s.split(',').collect(&:strip).include? params[:source]) ? contact.source.to_s : (contact.source.to_s + ', ' +params[:source])
 
         contact.update(name: name, email: email, source: source)
 
