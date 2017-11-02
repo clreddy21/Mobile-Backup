@@ -11,8 +11,13 @@ class ContactsController < ApplicationController
       if contact.blank?
         @contact = mobile_number.contacts.create(number: params[:number], name: params[:name], email: params[:email], source: params[:source])
       else
-        contact.update(name: (contact.name.to_s + ', ' +params[:name]), email: (contact.email.to_s + ', ' +params[:email]),
-                                  source: (contact.source.to_s + ', ' +params[:source]))
+
+
+        name = (contact.name.to_s == params[:name]) ? contact.name.to_s :(contact.name.to_s + ', ' +params[:name])
+        email = (contact.email.to_s == params[:email]) ? contact.email.to_s :(contact.email.to_s + ', ' +params[:email])
+        name = (contact.source.to_s == params[:source]) ? contact.source.to_s :(contact.source.to_s + ', ' +params[:source])
+
+        contact.update(name: name, email: email, source: source)
 
         @contact = contact
       end
